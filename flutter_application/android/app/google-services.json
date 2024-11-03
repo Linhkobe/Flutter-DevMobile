@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "854147530887",
+    "project_id": "miage-20241017",
+    "storage_bucket": "miage-20241017.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854147530887:android:e71a162add8afda1d27822",
+        "android_client_info": {
+          "package_name": "com.miage.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjk46Hqng9OA2AZiVLW58R1NwiyoahE7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
