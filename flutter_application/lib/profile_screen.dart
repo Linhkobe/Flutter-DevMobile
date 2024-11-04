@@ -19,6 +19,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _addressController = TextEditingController();
   final TextEditingController _birthdayController = TextEditingController();
   final TextEditingController _cityController = TextEditingController();
@@ -33,6 +34,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     if (userDoc.exists) {
       setState(() {
+        _usernameController.text = userDoc['login'];
         _addressController.text = userDoc['address'];
         _birthdayController.text = userDoc['birthday'];
         _cityController.text = userDoc['city'];
@@ -99,6 +101,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
           key: _formKey,
           child: ListView(
             children: [
+              TextFormField(
+                controller: _usernameController,
+                decoration: const InputDecoration(
+                  labelText: 'Nom d\'utilisateur'
+                  ),
+                  enabled: false,
+              ),
+
               TextFormField(
                 controller: _addressController,
                 decoration: const InputDecoration(labelText: 'Adresse'),

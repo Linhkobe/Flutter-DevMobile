@@ -98,16 +98,12 @@ class ClothingListView extends StatelessWidget {
 
   ClothingListView({Key? key, required this.userId}) : super(key: key);
 
+  // Shared collection to display all items for the "Acheter" page
   final CollectionReference clothingItemsCollection =
       FirebaseFirestore.instance.collection('clothingItems');
 
   @override
   Widget build(BuildContext context) {
-    final CollectionReference clothingItemsCollection = FirebaseFirestore
-        .instance
-        .collection('Users')
-        .doc(userId)
-        .collection('clothingItems');
     return StreamBuilder<QuerySnapshot>(
       stream: clothingItemsCollection.snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -128,6 +124,7 @@ class ClothingListView extends StatelessWidget {
         return ListView.builder(
           itemCount: clothingItems.length,
           itemBuilder: (context, index) {
+            // Use safe access to handle potential null or malformed data
             final item = clothingItems[index].data() as Map<String, dynamic>?;
 
             if (item == null) {
@@ -142,22 +139,22 @@ class ClothingListView extends StatelessWidget {
             final prix = item['prix'] as num? ?? 0;
             final marque = item['marque'] as String? ?? 'Inconnu';
 
+            // Decode the image only if it is valid base64, with a safe check
+            final imageWidget = base64Image != null && base64Image.startsWith("data:image")
+                ? Image.memory(
+                    base64Decode(base64Image.split(',')[1]),
+                    width: 50,
+                    height: 50,
+                    fit: BoxFit.cover,
+                  )
+                : const Icon(Icons.image_not_supported, size: 50, color: Colors.grey);
+
             return Card(
               margin: const EdgeInsets.all(8.0),
               child: ListTile(
-/*                 leading: imageUrl != null
-                    ? Image.network(imageUrl, width: 50, height: 50) */
-                    leading: base64Image != null
-                    ? Image.memory(
-                        base64Decode(base64Image.split(',')[1]),
-                        width: 50,
-                        height: 50,
-                        fit: BoxFit.cover,
-                      )
-                    : const Icon(Icons.image_not_supported,
-                        size: 50, color: Colors.grey),
+                leading: imageWidget,
                 title: Text(titre),
-                subtitle: Text('Taille: $taille , Prix: $prix'),
+                subtitle: Text('Taille: $taille , Prix: $prix, Marque: $marque'),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -177,3 +174,6 @@ class ClothingListView extends StatelessWidget {
     );
   }
 }
+
+
+
