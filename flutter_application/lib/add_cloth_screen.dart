@@ -50,10 +50,9 @@ class _AddClothingScreenState extends State<AddClothingScreen> {
       if (_imageFile != null) {
         print('Base64 Image: $_base64Image');
 
-        // Replace 'YOUR_USER_ID' with the actual logged-in user's ID
-        final userId = widget.userId; // Get the user's ID dynamically
+       
+        final userId = widget.userId; 
 
-        // Create a new item in the user's clothingItems collection
         try {
           await FirebaseFirestore.instance
               .collection('Users')
@@ -105,8 +104,6 @@ class _AddClothingScreenState extends State<AddClothingScreen> {
     }
   }
 
-
-
   @override
   void initState() {
     super.initState();
@@ -141,7 +138,7 @@ class _AddClothingScreenState extends State<AddClothingScreen> {
         http.MultipartFile.fromBytes(
           'file',
           bytes,
-          filename: image.name, // Use the actual name of the selected file
+          filename: image.name,
         ),
       );
 
@@ -171,7 +168,6 @@ class _AddClothingScreenState extends State<AddClothingScreen> {
       });
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
