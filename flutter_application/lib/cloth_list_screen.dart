@@ -50,8 +50,6 @@ class _ClothingListScreenState extends State<ClothingListScreen> {
         return 'Liste des vêtements';
       case 1:
         return 'Panier';
-/*       case 2:
-        return 'Mon Profil'; */
       default:
         return '';
     }
@@ -62,14 +60,11 @@ class _ClothingListScreenState extends State<ClothingListScreen> {
     return Scaffold(
       appBar: _selectedIndex != 2
           ? AppBar(
-              //title: Text(x()),
               title: Text(x()),
               centerTitle: true,
               backgroundColor: Color.fromARGB(255, 26, 228, 201))
           : null,
       body: _pages[_selectedIndex],
-
-      // Bottom Navigation bar
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -116,17 +111,15 @@ class ClothingListView extends StatelessWidget {
         return StreamBuilder<QuerySnapshot>(
           stream: userCollection.snapshots(),
           builder: (context, userSnapshot) {
-            // Error handling for both streams
             if (sharedSnapshot.hasError || userSnapshot.hasError) {
               return Center(child: Text('Error loading items'));
             }
-            // Wait for both streams to load
+
             if (sharedSnapshot.connectionState == ConnectionState.waiting ||
                 userSnapshot.connectionState == ConnectionState.waiting) {
               return const Center(child: CircularProgressIndicator());
             }
 
-            // Combine both lists
             final sharedItems = sharedSnapshot.data?.docs ?? [];
             final userItems = userSnapshot.data?.docs ?? [];
             final allItems = [...sharedItems, ...userItems];

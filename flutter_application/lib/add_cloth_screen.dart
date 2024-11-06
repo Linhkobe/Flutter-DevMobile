@@ -50,8 +50,7 @@ class _AddClothingScreenState extends State<AddClothingScreen> {
       if (_imageFile != null) {
         print('Base64 Image: $_base64Image');
 
-       
-        final userId = widget.userId; 
+        final userId = widget.userId;
 
         try {
           await FirebaseFirestore.instance
@@ -75,7 +74,6 @@ class _AddClothingScreenState extends State<AddClothingScreen> {
             ),
           );
 
-          // Clear the form
           _titleController.clear();
           _sizeController.clear();
           _brandController.clear();
