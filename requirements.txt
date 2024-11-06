@@ -1,3 +1,9 @@
+python-multipart==0.0.5
+fastapi==0.68.0
+pillow==8.3.1
+numpy==1.21.1
+tensorflow==2.5.0
+starlette==0.14.2
 pytest~=7.4.0
 jupyter~=1.0.0
 pip~=23.3.1
