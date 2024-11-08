@@ -3,24 +3,20 @@
 Ce référentiel contient une application mobile développée dans Flutter ainsi qu'un serveur backend construit avec FastAPI. Le serveur backend gère les requêtes API pour l'application et utilise un ensemble de dépendances spécifiées dans `requirements.txt`.
 
 ## Table des matières
-- [Structure du projet](#project-structure)
-- [Prérequis](#prerequis)
-- [Installation](#installation)
-- [Exécution du serveur backend](#running-the-backend-server)
-- [Exécution de l'application Flutter](#running-the-flutter-application)
-- [Test de l'application](#testing-the-application)
-- [Dépannage](#troubleshooting)
-
+- [A. Structure du projet](#project-structure)
+- [B. Prérequis](#prerequis)
+- [C. Les étapes à suivre pour tester l'application](#etape)
+- [D. Partie IA du projet](#AI)
 ---
 
-## Structure du projet
+## A. Structure du projet
 
 Les principaux dossiers et fichiers de ce projet incluent :
 - `flutter_application/` : contient tout le code de l'application Flutter.
 - `requirements.txt` : répertorie les dépendances Python pour le backend FastAPI.
 - `README.md` : documentation du projet (ce fichier).
 
-## Prérequis
+## B. Prérequis
 
 Pour exécuter et tester cette application, assurez-vous que les éléments suivants sont installés :
 
@@ -29,7 +25,7 @@ Pour exécuter et tester cette application, assurez-vous que les éléments suiv
 - **pip** : programme d'installation de package Python (fourni avec Python).
 - **Git** : contrôle de version pour cloner le référentiel.
 
-## Installation
+## C. Les étapes à suivre pour tester l'application
 
 ### 1. Cloner le référentiel
 
@@ -86,3 +82,16 @@ flutter pub get
 ```bash
 flutter run
 ```
+## D. Partie IA du projet
+
+### D.1 Les données utilisées pour entraîner le modèle
+
+- Les données sont récupérées grâce à [ce lien du Kaggle](https://www.kaggle.com/datasets/sunnykusawa/cloth-dataset/data)
+
+- En gros, les données comprenent 2 classes : Jeans et T-shirts
+
+#### D.2 L'entraînement du modèle
+- L'entraînement du modèle a été réalisé par [ce lien](https://teachablemachine.withgoogle.com/train)
+
+- Les images ont été uploadées manuellement sur la page, aussi on peut saisir le nom des classes
+![alt text](image.png)
