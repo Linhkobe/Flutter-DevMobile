@@ -5,10 +5,10 @@
 Ce référentiel contient une application mobile développée dans Flutter ainsi qu'un serveur backend construit avec FastAPI. Le serveur backend gère les requêtes API pour l'application et utilise un ensemble de dépendances spécifiées dans `requirements.txt`.
 
 ## Table des matières
-- [A. Structure du projet](#project-structure)
-- [B. Prérequis](#prerequis)
-- [C. Les étapes à suivre pour tester l'application](#etape)
-- [D. Partie IA du projet](#AI)
+- [A. Structure du projet](#a-structure-du-projet)
+- [B. Prérequis](#b-prerequis)
+- [C. Les étapes à suivre pour tester l'application](#c-les-etapes-a-suivre-pour-tester-lapplication)
+- [D. Partie IA du projet](#d-partie-ia-du-projet)
 ---
 
 ## A. Structure du projet
