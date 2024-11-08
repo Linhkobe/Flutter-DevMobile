@@ -1,5 +1,7 @@
 # Projet Flutter DevMobile
 
+## Réalisateur : Tuan Linh Dao (le compte "MokhtarSamy" - l'ordinateur emprunté/utilisé pour faire ce projet)
+
 Ce référentiel contient une application mobile développée dans Flutter ainsi qu'un serveur backend construit avec FastAPI. Le serveur backend gère les requêtes API pour l'application et utilise un ensemble de dépendances spécifiées dans `requirements.txt`.
 
 ## Table des matières
