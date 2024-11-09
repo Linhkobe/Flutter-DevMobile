@@ -39,7 +39,7 @@ cd Flutter-DevMobile
 
 ### 2. Démarrer python backend
 
-#### 2.3 installer les dépendences de python
+#### 2.3 installer les dépendances de python
 
 ```bash
 pip install -r requirements.txt 
@@ -84,7 +84,7 @@ uvicorn app:app --reload
 cd flutter_application
 ```
 
-#### 3.2 Installer les dépendences de flutter
+#### 3.2 Installer les dépendances de flutter
 ```bash
 flutter pub get 
 ```
