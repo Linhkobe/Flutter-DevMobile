@@ -15,13 +15,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-interpreter = tf.lite.Interpreter(model_path="assets/model_unquant.tflite")
+# interpreter = tf.lite.Interpreter(model_path="assets/model_unquant.tflite")
+interpreter = tf.lite.Interpreter(model_path="assets/model_unquant_3_classes.tflite")
 interpreter.allocate_tensors()
 
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
-with open("assets/labels.txt", "r") as f:
+""" with open("assets/labels.txt", "r") as f:
+    labels = [line.strip().split(" ", 1)[-1] for line in f] """
+    
+with open("assets/labels_3_classes.txt", "r") as f:
     labels = [line.strip().split(" ", 1)[-1] for line in f]
 
 @app.post("/predict/")

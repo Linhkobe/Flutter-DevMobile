@@ -113,14 +113,18 @@ flutter run
 
 ## D. Partie IA du projet
 
+### Le but de l'utilisation d'IA est permettre utilisateur de classifier la catégorie de vêtement à partir d'une image uploadée sur l'application.
+
 ### D.1 Les données utilisées pour entraîner le modèle
 
-- Les données sont récupérées grâce à [ce lien du Kaggle](https://www.kaggle.com/datasets/sunnykusawa/cloth-dataset/data)
+- Les données sont récupérées grâce à [ce lien du Kaggle](https://www.kaggle.com/datasets/sunnykusawa/cloth-dataset/data) , ici on a deux classes Jeans et T-shirts.
 
-- En gros, les données comprenent 2 classes : Jeans et T-shirts
+- Une autre classe "Skirts" a été créée (l'enregistrement de l'ensemble des images sur internet).
+
+- Donc les données comprenent 3 classes : Jeans, T-shirts, Skirts
 
 #### D.2 L'entraînement du modèle
 - L'entraînement du modèle a été réalisé par [ce lien](https://teachablemachine.withgoogle.com/train)
 
 - Les images ont été uploadées manuellement sur la page, aussi on peut saisir le nom des classes
-![alt text](image.png)
+![alt text](image-2.png)

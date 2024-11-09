@@ -111,8 +111,9 @@ class _AddClothingScreenState extends State<AddClothingScreen> {
   Future<void> loadModel() async {
     try {
       String? result = await Tflite.loadModel(
-        model: 'assets/model_unquant.tflite',
-        labels: 'assets/labels.txt',
+        //model: 'assets/model_unquant.tflite',
+        model: 'assets/model_unquant_3_classes.tflite',
+        labels: 'assets/labels_3_classes.txt',
         numThreads: 1,
       );
       print('Modèle chargé: $result');
