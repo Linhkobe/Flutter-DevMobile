@@ -38,18 +38,6 @@ cd Flutter-DevMobile
 
 ### 2. Démarrer python backend
 
-#### 2.1 Création de l'environnement virtuel de python
-
-```bash
-python -m venv venv
-```
-
-#### 2.2 Activez l'environnement virtuel de python
-
-```bash
-venv\Scrips\activate
-``` 
-
 #### 2.3 installer les dépendences de python
 
 ```bash
@@ -58,15 +46,35 @@ pip install -r requirements.txt
 
 #### 2.4 Lancement de fastapi (Ouvrez cmd - Invite de commandes)
 
-#### 2.4.1 Naviguez en suivant ce chemin vers le projet
+#### 2.4.1 Naviguez en suivant ce chemin vers le projet (selon l'nregistrement du projet sur votre ordinateur)
 
 ```bash
-cd C:\Users\admin\OneDrive\Documents\dev_mobile\Flutter-DevMobile\flutter_application 
+cd C:...\Flutter-DevMobile\flutter_application 
 ```
-#### 2.4.2 Lancez le server
+#### 2.4.2 Lancez le server en suivant ces sous-étapes
+
+#### Installez uvicorn
+```bash
+pip install uvicorn
+```
+
+#### Installez python-multipart
+```bash
+pip install python-multipart
+```
+
+#### Installez fastapi
+```bash
+pip install fastapi
+```
+
+#### Finallement lancer le serveur
 ```bash
 uvicorn app:app --reload
 ```
+
+### Une fois le serveur est lancé, vérifiez votre cmd comme l'image suivant 
+![alt text](image-1.png)
 
 ### 3. Lancement de flutter application
 
