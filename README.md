@@ -15,6 +15,7 @@ Ce référentiel contient une application mobile développée dans Flutter ainsi
 
 Les principaux dossiers et fichiers de ce projet incluent :
 - `flutter_application/` : contient tout le code de l'application Flutter.
+- `Image pour tester/` : contient les images pour uploader sur l'application lorsqu'utilisateur veut ajouter nouveau vêtement dans sa liste (autrement dit tester la classification du modèle entraîné).
 - `requirements.txt` : répertorie les dépendances Python pour le backend FastAPI.
 - `README.md` : documentation du projet (ce fichier).
 
@@ -88,7 +89,7 @@ cd flutter_application
 flutter pub get 
 ```
 
-#### 3.3 Lancer l'application
+#### 3.3 Lancer l'application (choisir votre navigateur préféré)
 ```bash
 flutter run
 ```
