@@ -14,7 +14,7 @@ class ClothingDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(clothingItem['titre'] ?? 'Détail de vêtement choisi'),
+        title: Text('Détail de vêtement choisi'),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 26, 228, 201),
       ),

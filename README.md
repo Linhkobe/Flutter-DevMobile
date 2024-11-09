@@ -92,6 +92,25 @@ flutter pub get
 ```bash
 flutter run
 ```
+
+### 4. Liste des users et leur mot de passe pour l'authentification
+
+=================================
+
+#### 4.1 Utilisateur 1
+
+#### login: tester2
+#### Mot de passe : passcode567
+
+=================================
+
+#### 4.2 Utilisateur 2
+
+#### login: tester 
+#### Mot de passe : passcode234
+
+==================================
+
 ## D. Partie IA du projet
 
 ### D.1 Les données utilisées pour entraîner le modèle
